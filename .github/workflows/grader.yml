@@ -43,8 +43,8 @@ jobs:
 #        run: mvn -B -ntp verify --file pom.xml
         run: mvn -B -ntp verify --file pom.xml -P existence-tests
         continue-on-error: true
-      - name: Verify submission not past due date
-        run: bash .github/workflows/check_due_date.sh
+      # - name: Verify submission not past due date
+      #   run: bash .github/workflows/check_due_date.sh
       - name: Run PMD
         run: mvn pmd:pmd
       - name: Print effective POM
@@ -58,7 +58,7 @@ jobs:
       - name: Upload Report as Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: test-report
-          path: ./test-report.txt
-      - name: Cheer!
-        run: bash .github/workflows/success.sh
+          name: report
+          path: ./report.txt
+      # - name: Cheer!
+      #   run: bash .github/workflows/success.sh

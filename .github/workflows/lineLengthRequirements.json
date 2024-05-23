@@ -1,6 +1,7 @@
-
 {
-    "Circle": {
-        "complicatedMethod":50
+    "Sort": {
+        "bubbleSort":3,
+        "insertionSort":4,
+        "selectionSort":4
     }
 }

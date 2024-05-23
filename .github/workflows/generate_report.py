@@ -162,7 +162,7 @@ def generate_report(results, effort_results, pmd_results, output_file):
 
 
 xml_directory = 'target/surefire-reports'
-output_text_file = 'test-report.txt'
+output_text_file = 'report.txt'
 results = parse_junit_xml(xml_directory)
 pmd_results = parse_pmd_xml('target')
 methods = parse_java_files('src/main/java')
