@@ -33,12 +33,12 @@ jobs:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
-#      - name: Verify PR base repo
-#        run: bash .github/workflows/check_PR_target_repo.sh
-#      - name: Verify no changes to the main branch
-#        run: bash .github/workflows/check_no_change_to_main.sh
-#      - name: Verify no changes to the grader scripts
-#        run: bash .github/workflows/check_no_change_to_grader.sh
+     - name: Verify PR base repo
+       run: bash .github/workflows/check_PR_target_repo.sh
+     - name: Verify no changes to the main branch
+       run: bash .github/workflows/check_no_change_to_main.sh
+     - name: Verify no changes to the grader scripts
+       run: bash .github/workflows/check_no_change_to_grader.sh
       - name: Build and run unit tests
 #        run: mvn -B -ntp verify --file pom.xml
         run: mvn -B -ntp verify --file pom.xml -P existence-tests
