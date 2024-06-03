@@ -4,25 +4,6 @@ import re
 import datetime
 import json
 
-
-# def parse_java_file(file_path):
-#     with open(file_path, 'r') as file:
-#         content = file.read()
-
-#     # Regex pattern to match Java methods (simplified version)
-#     pattern = r'(public|private|protected|static)\s+\w+\s+(\w+)\s*\([^)]*\)\s*\{([^}]*)\}'
-#     matches = re.finditer(pattern, content, re.MULTILINE | re.DOTALL)
-
-#     methods = {}
-#     for match in matches:
-#         method_name = match.group(2)
-#         method_body = match.group(3)
-#         # Count the lines in the method body, adjusting for the method's opening and closing braces
-#         line_count = method_body.count('\n') + 1
-#         methods[method_name] = line_count
-
-#     return methods
-
 def parse_java_files(directory):
     java_files = [f for f in os.listdir(directory) if f.endswith('.java')]
     classes = {}
